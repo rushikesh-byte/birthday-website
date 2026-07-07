@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="top">
+
+        <div class="dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+
+        <div class="url">
+            diksha's bday.intro
+        </div>
+
+        <div class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="center">
+
+        <div class="line"></div>
+
+        <!-- Change the filename if needed -->
+        <img src="images/cake.png" alt="Birthday Cake">
+
+        <div class="small">
+            A little note for you
+        </div>
+
+        <p id="message" class="message">
+            It's your special day
+        </p>
+
+        <p id="message" style="font-size:32px;">
+
+</p>
+
+<div id="buttons" class="buttons">
+
+    <button class="yes-btn" onclick="openSurprise()">
+        Yes ❤️
+    </button>
+
+    <button class="no-btn" onclick="window.location.href='no.html'">No</button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/bmb.mp3" type="audio/mpeg">
+</audio>
+
+<script src="music.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn on the Lights</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="lights.css">
+</head>
+<body>
+
+<!-- Stars -->
+<div id="stars"></div>
+
+<!-- Hanging Lights -->
+<div id="lightString" class="light-string">
+
+    <div class="wire"></div>
+
+    <div class="bulb red"></div>
+    <div class="bulb yellow"></div>
+    <div class="bulb green"></div>
+    <div class="bulb blue"></div>
+    <div class="bulb pink"></div>
+    <div class="bulb purple"></div>
+    <div class="bulb orange"></div>
+
+</div>
+
+<!-- Card -->
+<div class="card">
+
+    <div class="top">
+
+        <div class="dots">
+            <span class="red-dot"></span>
+            <span class="yellow-dot"></span>
+            <span class="green-dot"></span>
+        </div>
+
+        <div class="title">
+            birthday-star.lights
+        </div>
+
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <h1 id="title">
+            Shall we light up the room?
+        </h1>
+
+        <p id="subtitle">
+            One click will make everything brighter.
+        </p>
+
+        <button id="lightBtn" onclick="turnOnLights()">
+            💡 Turn on the lights
+        </button>
+
+        <button id="moodBtn" class="hidden" onclick="startMusic()">
+    🎵 Continue
+</button>
+
+    </div>
+
+</div>
+
+<script src="lights.js"></script>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/bmb.mp3" type="audio/mpeg">
+</audio>
+
+<script src="music.js"></script>
+</body>
+</html>

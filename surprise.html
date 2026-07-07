@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+
+    <link rel="stylesheet" href="surprise.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="browser">
+
+        <div class="dots">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+
+        <div class="title">
+            birthday-star.loading
+        </div>
+
+        <div class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <h1>✨ Have a look at it ✨</h1>
+
+        <p id="loadingText">
+            Setting everything up...
+        </p>
+
+        <div class="loader"></div>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const loadingText = document.getElementById("loadingText");
+
+const texts = [
+    "Setting everything up...",
+    "Decorating with love...",
+    "Almost ready...",
+    "One last surprise..."
+];
+
+let index = 0;
+
+setInterval(() => {
+
+    index++;
+
+    if(index < texts.length){
+        loadingText.textContent = texts[index];
+    }
+
+},1000);
+
+setTimeout(() => {
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+
+        window.location.href = "lights.html";
+
+    },500);
+
+},4500);
+
+</script>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/bmb.mp3" type="audio/mpeg">
+</audio>
+
+<script src="music.js"></script>
+</body>
+</html>

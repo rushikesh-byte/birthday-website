@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>For You ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="music.css">
+
+</head>
+
+<body>
+
+
+<div class="card">
+
+<h1>❤️ Before We Continue ❤️</h1>
+
+<p id="message">
+
+Every smile of yours deserves to be celebrated.
+
+<br><br>
+
+Today isn't just another day.
+
+It's the day someone amazing came into this world.
+
+<br><br>
+
+So...
+
+Sit back,
+
+relax,
+
+turn the volume up,
+
+and enjoy this little surprise made especially for you.
+
+💖
+
+</p>
+
+<button onclick="nextPage()">
+
+🎂 Let's Begin
+
+</button>
+
+</div>
+
+<script>
+
+function nextPage(){
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href="cake.html";
+
+},500);
+
+}
+
+</script>
+
+</body>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/bmb.mp3" type="audio/mpeg">
+</audio>
+
+<script src="music.js"></script>
+</html>

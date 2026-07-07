@@ -1,0 +1,382 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#10172d;
+
+    transition:1.5s ease;
+
+    position:relative;
+}
+
+/* ========================= */
+/* Stars */
+/* ========================= */
+
+#stars{
+    position:absolute;
+    inset:0;
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:blink 2s infinite alternate;
+
+}
+
+@keyframes blink{
+
+    from{
+        opacity:.2;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ========================= */
+/* Hanging Lights */
+/* ========================= */
+
+.light-string{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:flex-start;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+.wire{
+
+    position:absolute;
+
+    top:25px;
+
+    width:100%;
+
+    height:3px;
+
+    background:#444;
+
+}
+
+.bulb{
+
+    width:22px;
+    height:35px;
+
+    margin-top:25px;
+
+    border-radius:50% 50% 45% 45%;
+
+    opacity:.25;
+
+    transition:.6s;
+
+}
+
+.red{background:#ff5a5a;}
+.green{background:#63ff63;}
+.blue{background:#63c5ff;}
+.yellow{background:#fff46a;}
+.pink{background:#ff8bd7;}
+.orange{background:#ffae5d;}
+.purple{background:#b67bff;}
+
+.light-string.on{
+
+    opacity:1;
+
+}
+
+.light-string.on .bulb{
+
+    opacity:1;
+
+    box-shadow:
+    0 0 20px currentColor,
+    0 0 40px currentColor;
+
+}
+
+/* ========================= */
+/* Card */
+/* ========================= */
+
+.card{
+
+    width:min(90%,720px);
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/* Browser */
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.dots{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.red-dot,
+.yellow-dot,
+.green-dot{
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+}
+
+.red-dot{
+    background:#ff605c;
+}
+
+.yellow-dot{
+    background:#ffbd44;
+}
+
+.green-dot{
+    background:#00ca4e;
+}
+
+.title{
+
+    color:#ffd8eb;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:5px;
+
+}
+
+.menu span{
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#ffd8eb;
+
+}
+
+.content{
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:#ddd;
+
+    margin-bottom:35px;
+
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+button{
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#lightBtn{
+
+    background:linear-gradient(135deg,#ff7db8,#ffb88c);
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(255,105,180,.35);
+
+}
+
+#lightBtn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+#moodBtn{
+
+    margin-top:20px;
+
+    display:none;
+
+    background:white;
+
+    color:#444;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#moodBtn.show{
+
+    display:inline-block;
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ========================= */
+/* Lights On */
+/* ========================= */
+
+body.lights-on{
+
+    background:linear-gradient(135deg,#ffe6ef,#fff5ef,#fdeeff);
+
+}
+
+body.lights-on .card{
+
+    background:rgba(255,255,255,.6);
+
+    color:#333;
+
+}
+
+body.lights-on p{
+
+    color:#666;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+}

@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+
+    background:linear-gradient(135deg,#ffe8f2,#fff6f1,#fdefff);
+
+    transition:opacity .5s ease;
+}
+
+/* Background Glow */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 20% 20%,rgba(255,182,193,.35),transparent 35%),
+    radial-gradient(circle at 80% 70%,rgba(255,230,180,.30),transparent 35%),
+    radial-gradient(circle at 50% 90%,rgba(255,255,255,.45),transparent 40%);
+
+    animation:bgMove 18s linear infinite;
+
+}
+
+@keyframes bgMove{
+
+    0%{
+        transform:translate(-5%,-5%);
+    }
+
+    50%{
+        transform:translate(5%,3%);
+    }
+
+    100%{
+        transform:translate(-5%,-5%);
+    }
+
+}
+
+/* Card */
+
+.card{
+
+    position:relative;
+
+    width:min(92%,700px);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+
+    0 20px 60px rgba(255,150,180,.20),
+    0 0 35px rgba(255,255,255,.6);
+
+    animation:fadeUp .8s ease;
+
+    z-index:10;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Browser */
+
+.browser{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:45px;
+
+}
+
+.dots span{
+
+    display:inline-block;
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    margin-right:6px;
+
+}
+
+.red{
+    background:#ff605c;
+}
+
+.yellow{
+    background:#ffbd44;
+}
+
+.green{
+    background:#00ca4e;
+}
+
+.title{
+
+    font-size:13px;
+
+    color:#dd7ca8;
+
+    letter-spacing:2px;
+
+}
+
+.right span{
+
+    display:inline-block;
+
+    width:7px;
+    height:7px;
+
+    margin-left:6px;
+
+    border-radius:50%;
+
+    background:#ffc5dc;
+
+}
+
+/* Content */
+
+.content{
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:42px;
+
+    color:#d86f99;
+
+    margin-bottom:12px;
+
+}
+
+p{
+
+    font-size:18px;
+
+    color:#666;
+
+    min-height:28px;
+
+}
+
+/* Spinner */
+
+.loader{
+
+    width:58px;
+
+    height:58px;
+
+    margin:35px auto;
+
+    border-radius:50%;
+
+    border:5px solid #ffd7e8;
+
+    border-top:5px solid #ff5fa3;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* Progress Bar */
+
+.progress{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#ffe8f2;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:30px;
+
+    background:linear-gradient(90deg,#ff6aa7,#ffc68a);
+
+    animation:loading 4.5s linear forwards;
+
+}
+
+@keyframes loading{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+}
